@@ -26,6 +26,5 @@ class Command(BaseCommand):
             except Exception as e:
                 self.stdout.write(f'(wait_for_db) An error occurred, unexpected: {e}')
                 time.sleep(1)
-        time.sleep(10)
 
         self.stdout.write(self.style.SUCCESS('Database available!'))
