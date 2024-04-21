@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'drf_spectacular',
     'user',
-    'rest_framework.authtoken'
+    'rest_framework.authtoken',
+    'recipe',
 ]
 
 MIDDLEWARE = [
@@ -136,4 +137,8 @@ AUTH_USER_MODEL = 'core.User'
 
 REST_FRAMEWORK = {
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'COMPONENT_SPLIT_REQUEST': True,
 }
